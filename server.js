@@ -1,5 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
+require('dotenv').config();
+const mongoURI = process.env.MONGODB_URI
 const Product = require ('./models/productModel')
 const app = express()
 
@@ -71,7 +73,7 @@ app.delete('/products/:id', async(req, res) => {
     }
 })
 
-mongoose.connect('mongodb+srv://admin:2016474@travisapi.mmzwmwi.mongodb.net/Node-API?retryWrites=true&w=majority&appName=TravisAPI')
+mongoose.connect(mongoURI)
     .then(() => {
         console.log('connected to MongoDB')
         app.listen(3000, ()=> {
