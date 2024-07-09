@@ -76,8 +76,8 @@ app.delete('/products/:id', async(req, res) => {
 mongoose.connect(mongoURI)
     .then(() => {
         console.log('connected to MongoDB')
-        app.listen(3000, ()=> {
-            console.log('Node API app is running on port 3000')
+        app.listen(8080, ()=> {
+            console.log('Node API app is running on port 8080')
         })
 
     }).catch((error) => {
