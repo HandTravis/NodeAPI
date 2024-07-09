@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: false}))
 //routes
 
 app.get('/', (req, res) => {
-    res.send('Hello NODE API')
+    res.send('Hello NODE API, this is the root directory!')
 })
 
 app.get('/blog', (req, res) => {
